@@ -16,8 +16,7 @@ public class UserServiceDto {
 
     public String email;
 
-    public UserServiceDto(int i, String a, String s) {
-    }
+
 
     public Long getId() {
         return id;

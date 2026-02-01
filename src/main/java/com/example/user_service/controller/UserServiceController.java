@@ -24,8 +24,8 @@ public class UserServiceController {
     @GetMapping("/users")
     public List<UserServiceDto> mapping(){
         return Stream.of(
-                new UserServiceDto(1,"A","a@a.com"),
-                new UserServiceDto(2,"B","b@b.com")
+                new UserServiceDto(1L,"A","a@a.com"),
+                new UserServiceDto(2L,"B","b@b.com")
         ).collect(Collectors.toList());
     }
 }
