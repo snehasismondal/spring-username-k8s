@@ -23,7 +23,7 @@ spec:
     spec:
       containers:
         - name: user-app-container
-          image: 'snemon/userapp:1.0.0-5'
+          image: 'snemon/userapp:1.0.0-9'
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 9191
