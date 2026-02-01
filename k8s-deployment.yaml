@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: user-svc-deployment #name of deployment
+  namespace: sne-userapp
+spec:
+  selector: #Tells which pod/pods to manage. Helps to group the pods
+    matchLabels:
+      app: spring-boot-k8s
+  replicas: 4
+  template: #template of the pods. Name is same of the selector, so can be selected.
+    metadata:
+      labels:
+        app: spring-boot-k8s
+    spec:
+      containers:
+        - name: user-app-container
+          image: 'userapp:2.0'
+          imagePullPolicy: IfNotPresent
+          ports:
+          - containerPort: 9191
